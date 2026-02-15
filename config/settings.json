@@ -1,3 +1,6 @@
 {
-  "placeholder": "Configuration settings will go here"
+  "base_url": "https://example.com",
+  "crawl_depth": 2,
+  "output_format": ["html","json","markdown"],
+  "respect_robots": true
 }
