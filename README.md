@@ -19,3 +19,75 @@ Generated outputs:
 - Markdown reference file
 
 Technical enquiries: tools@ethical.ink
+
+LLMS-INFO SYSTEM FLOW
+────────────────────────────────────────────────────────
+
+        settings.json
+             │
+             ▼
+      ┌──────────────┐
+      │ generator.js │   ← orchestrator / controller
+      └──────┬───────┘
+             │
+             ▼
+      ┌──────────────┐
+      │  crawler.js  │   ← visits pages
+      └──────┬───────┘
+             │
+             ▼
+      collected page data
+             │
+             ▼
+      ┌──────────────┐
+      │  parser.js   │   ← structures + formats data
+      └──────┬───────┘
+             │
+             ▼
+      formatted outputs
+             │
+             ▼
+     ┌─────────────────────┐
+     │     /output folder   │
+     │---------------------│
+     │ llms-info.html      │
+     │ llms-info.json      │
+     │ llms-info.md        │
+     └─────────────────────┘
+
+────────────────────────────────────────────────────────
+MODULE RESPONSIBILITIES
+────────────────────────────────────────────────────────
+
+generator.js
+→ controls workflow
+→ loads config
+→ triggers crawler
+→ saves files
+
+crawler.js
+→ visits pages
+→ extracts metadata
+→ collects headings
+→ follows links
+
+parser.js
+→ converts raw data
+→ builds structured formats
+→ prepares outputs
+
+utils.js
+→ helper functions (timers, tools)
+
+settings.json
+→ site URL
+→ crawl depth
+→ output types
+
+────────────────────────────────────────────────────────
+EXECUTION COMMAND
+────────────────────────────────────────────────────────
+
+npm start
+
+(That single command runs the entire pipeline.)
