@@ -1,3 +1,5 @@
 # Usage Guide
 
-This document will contain usage instructions.
+Run:
+npm start
+Outputs will appear in /output folder.
