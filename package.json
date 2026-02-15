@@ -1,12 +1,14 @@
 {
   "name": "llms-info",
   "version": "1.0.0",
-  "description": "LLMS-Info project",
-  "main": "index.js",
+  "description": "LLM transparency site mapper",
+  "main": "src/generator.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/generator.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0"
+  }
 }
