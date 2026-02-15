@@ -1,3 +1,6 @@
 # Folder Structure
 
-This document will contain information about the folder structure.
+config = settings
+src = logic
+output = generated files
+docs = instructions
